@@ -22,11 +22,11 @@ var buildTask = function() {
     .pipe(gulp.dest('./img'));
   gulp.src('./src/fonts/*')
     .pipe(gulp.dest('./fonts'));
-  gulp.src(['./src/css/bootstrap-v3.3.6.css', './src/css/style.css'])
+  gulp.src(['./src/css/bootstrap.css', './src/css/style.css'])
     .pipe(concat('style.min.css'))
     .pipe(minifycss())
     .pipe(gulp.dest('./css'));
-  gulp.src(['./src/js/jquery-v2.1.4.js', './src/js/bootstrap-v3.3.6.js'])
+  gulp.src(['./src/js/jquery-1.12.1.js', './src/js/bootstrap.js'])
     .pipe(concat('vendor.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./js'));
