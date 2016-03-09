@@ -16,3 +16,122 @@ _s | * GPL License
 *** This is just for the template to register in WordPress. All of the css files are in /src ***
 
 */
+
+.site-branding {
+
+	margin: 0px auto;
+}
+.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}
+
+header {
+	background: #7386ac;
+}
+
+footer {
+	background: #7386ac;
+	padding: 20px 0;
+	min-height:200px;
+}
+ 
+.right {
+	float:right;
+}
+
+.navbar-toggle .icon-bar:nth-of-type(2) {
+	  top: 1px;
+}
+
+.navbar-toggle .icon-bar:nth-of-type(3) {
+  	top: 2px;
+}
+
+.navbar-toggle .icon-bar {
+	  position: relative;
+	  transition: all 500ms ease-in-out;
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(1) {
+	  top: 6px;
+	  transform: rotate(45deg);
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(2) {
+	  background-color: transparent;
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(3) {
+	  top: -6px;
+	  transform: rotate(-45deg);
+}
+
+
+.site-branding img {
+	
+}
+
+
+/* ========= Contact Form 7 =========== */
+
+div.wpcf7 .screen-reader-response {
+			display: none;
+		}
+		div.wpcf7 img.ajax-loader {
+			border: none;
+			vertical-align: middle;
+			margin-left: 4px;
+		}
+		div.wpcf7 .form-inline img.ajax-loader {
+			display: inline;
+		}
+		div.wpcf7 div.ajax-error {
+			display: none;
+		}
+		div.wpcf7 .wpcf7-display-none {
+			display: none;
+		}
+		div.wpcf7 .form-inline .form-group {
+			max-width: 250px;
+		}
+		div.wpcf7 .input-group-addon img {
+			height: 100%;
+			width: auto;
+			max-width: none !important;
+			border-radius: 5px;
+		}
+		div.wpcf7 .input-group-addon.input-group-has-image {
+			padding: 0;
+		}
+
+/* ========= Breakpoints =========== */
+				
+ 
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.site-branding img {
+	 width: 400px;
+	}
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+	.site-branding img {
+	 width: 300px;
+	}
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+	.site-branding img {
+	 width: 300px;
+	}
+}
