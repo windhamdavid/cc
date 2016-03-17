@@ -17,18 +17,38 @@ _s | * GPL License
 
 */
 
-.site-branding {
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,800,300);
 
+.site-branding {
 	margin: 0px auto;
+}
+.site-branding img {
+	
+}
+.call-to-action {
+	margin: 0px 0;
+}
+.work-sans {
+	color: #EC4A21;
+ 	font-size:20px;
+ 	font-family: 'Work Sans', sans-serif;
+ 	font-weight: 800;
+}
+.btn-call {
+	background: #EC4A21;
+	color: #333;
+ 	font-size:16px;
+ 	font-family: 'Work Sans', sans-serif;
+ 	font-weight: 800 !important;
 }
 .recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}
 
 header {
-	background: #7386ac;
+	background: #333;
 }
 
 footer {
-	background: #7386ac;
+	background: #333;
 	padding: 20px 0;
 	min-height:200px;
 }
@@ -36,39 +56,61 @@ footer {
 .right {
 	float:right;
 }
+.light {
+	color: #cecece;
+}
+
+.navbar {
+	font-size:16px;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+}
 
 .navbar-toggle .icon-bar:nth-of-type(2) {
 	  top: 1px;
 }
-
 .navbar-toggle .icon-bar:nth-of-type(3) {
   	top: 2px;
 }
-
 .navbar-toggle .icon-bar {
 	  position: relative;
 	  transition: all 500ms ease-in-out;
 }
-
 .navbar-toggle.active .icon-bar:nth-of-type(1) {
 	  top: 6px;
 	  transform: rotate(45deg);
 }
-
 .navbar-toggle.active .icon-bar:nth-of-type(2) {
 	  background-color: transparent;
 }
-
 .navbar-toggle.active .icon-bar:nth-of-type(3) {
 	  top: -6px;
 	  transform: rotate(-45deg);
 }
 
 
-.site-branding img {
-	
+footer {
+	margin: 60px 0 0;
 }
 
+span.fb  {
+	float: right;
+	width: 32px;
+	height: 32px;
+	margin-left: 5px;
+	padding: 3px 4px 2px 5px;
+	background-image: url(img/fb.png) ;
+	background-position: 0 32px;
+	position: relative;
+	-webkit-transition: all ease 0.3s;
+	-moz-transition: all ease 0.3s;
+	-o-transition: all ease 0.3s;
+	-ms-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+	}
+	span.fb:hover {
+		background-position: 0 0px;
+	}
 
 /* ========= Contact Form 7 =========== */
 
@@ -102,6 +144,62 @@ div.wpcf7 .screen-reader-response {
 			padding: 0;
 		}
 
+
+
+
+		.carousel-fade .carousel-inner .item {
+		  opacity: 0;
+		  transition-property: opacity;
+		}
+
+		.carousel-fade .carousel-inner .active {
+		  opacity: 1;
+		}
+
+		.carousel-fade .carousel-inner .active.left,
+		.carousel-fade .carousel-inner .active.right {
+		  left: 0;
+		  opacity: 0;
+		  z-index: 1;
+		}
+
+		.carousel-fade .carousel-inner .next.left,
+		.carousel-fade .carousel-inner .prev.right {
+		  opacity: 1;
+		}
+
+		.carousel-fade .carousel-control {
+		  z-index: 2;
+		}
+
+		/*
+		  WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+		  Need to override the 3.3 new styles for modern browsers & apply opacity
+		*/
+		@media all and (transform-3d), (-webkit-transform-3d) {
+		    .carousel-fade .carousel-inner > .item.next,
+		    .carousel-fade .carousel-inner > .item.active.right {
+		      opacity: 0;
+		      -webkit-transform: translate3d(0, 0, 0);
+		              transform: translate3d(0, 0, 0);
+		    }
+		    .carousel-fade .carousel-inner > .item.prev,
+		    .carousel-fade .carousel-inner > .item.active.left {
+		      opacity: 0;
+		      -webkit-transform: translate3d(0, 0, 0);
+		              transform: translate3d(0, 0, 0);
+		    }
+		    .carousel-fade .carousel-inner > .item.next.left,
+		    .carousel-fade .carousel-inner > .item.prev.right,
+		    .carousel-fade .carousel-inner > .item.active {
+		      opacity: 1;
+		      -webkit-transform: translate3d(0, 0, 0);
+		              transform: translate3d(0, 0, 0);
+		    }
+		}
+
+
+
 /* ========= Breakpoints =========== */
 				
  
@@ -118,20 +216,20 @@ div.wpcf7 .screen-reader-response {
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
 	.site-branding img {
-	 width: 400px;
+	 width: 300px;
 	}
 }
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
 	.site-branding img {
-	 width: 300px;
+	 width: 200px;
 	}
 }
 
 /* Custom, iPhone Retina */ 
 @media only screen and (max-width : 320px) {
 	.site-branding img {
-	 width: 300px;
+	 width: 200px;
 	}
 }
